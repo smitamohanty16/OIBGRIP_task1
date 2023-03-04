@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Landing Page</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <style>
+    header{
+      width: 100%;
+      height: 100vh;
+     background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/9a/22/c2/la-mer-deluxe-hotel-spa.jpg?w=900&h=-1&s=1");
+     background-size: cover;
+     font-family: sans-serif;
+    }
+    header:hover{
+        background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.2)), url("https://i.pinimg.com/originals/27/99/3a/27993a1041c4b51d5878220aea86fc6c.jpg");
+        background-size: cover;
+    }
+    nav{
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .logo{
+      font-size: 2em;
+      letter-spacing: 1px;
+      color: lime;
+      font-style: oblique;
+    }
+    .logo:hover{
+      color: indianred;
+      padding: 16px;
+    }
+    .menu a{
+      text-decoration:underline;
+      color: black;
+      padding: 10px 10px;
+      font-size: 20px;
+      color: greenyellow;
+
+    }
+    .menu a:hover{
+      color:indianred;
+      padding: 16px;
+    }
+    .register input{
+      text-decoration: none;
+      color: black;
+      padding: 10px 10px;
+      font-size: 20px;
+      background-color: greenyellow;
+      
+    }
+    .register input:hover{
+      color: indianred;
+    }
+    .sec span:hover{
+      color: greenyellow;
+      padding: 16px;
+    }
+    .sec h1:hover{
+      color: greenyellow;
+      padding: 16px;
+    }
+    .sec{
+      max-width: 600px;
+      transform: translate(-50%,-50%);
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+    }
+    .sec span{
+      font-style: italic;
+      font-size: 1.5em;
+      color: white;
+    }
+    .sec h1{
+      font-style: italic;
+      font-size: 2em;
+      color: white;
+    }
+    .sec a{
+      text-decoration: none;
+      background-color: greenyellow;
+      font-style: inherit;
+      font-size: 1.5em;
+      padding: 10px 20px;
+      letter-spacing: 0.5em;
+    }
+    .section{
+      max-width: 600px;
+      transform: translate(-50%,-50%);
+      position:absolute;
+      top: 95%;
+      right: 1%;
+      text-align: right;
+      font-family: sans-serif;
+      font-size: 20px;
+    }
+    footer img{
+      width: 100%;
+      height: 100vh;
+    }
+    .img{
+      width: 100%;
+      height: 100vh;
+    }
+    .footer{
+      background-color:oldlace;
+
+    }
+    .container{
+      max-width: 1170px;
+      background-color:black;
+      margin: auto;
+    }
+    ul{
+      list-style:none;
+    }
+    .row{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .footer-col{
+      width: 25%;
+      padding: 0 15px;
+    }
+    .footer-col h3{
+      font-size: 18px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 30px;
+      font-weight: 500;
+      position: relative;
+    
+    }
+    .footer-col h3::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      background-color: #e91e63;
+      height: 2px;
+      box-sizing: border-box;
+      width: 50px;
+    }
+    .footer-col ul li{
+      margin-bottom: 10px;
+
+    }
+    .footer-col ul li a{
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      display: block;
+      color: #bbbbbb;
+      transition:all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+     color: #ffffff;
+     padding: 8px;
+    }
+    .footer-col .social-links{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255,255,255,0.2);
+      margin:0 10px 10px 0 ;
+      text-align: center;
+      line-height: 40px;
+      color: #ffffff;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    .footer-col .social-links a:hover{
+      color:#24262b;
+      background-color: #ffffff;
+    }
+    @media(max-width:767px){
+        .footer-col{
+          width: 50%;
+          margin-bottom:30px
+        }
+    }
+    @media(max-width:574px){
+        .footer-col{
+          width: 100%;
+        
+        }
+    
+    
+    }
+    .picture h2{
+      text-align: center;
+      color: goldenrod;
+      font-size: xx-large;
+      font-family: sans-serif;
+      font-style: initial;
+      transition:all 0.3s ease;
+    }
+    .picture h2:hover{
+     color: black;
+     padding: 8px;
+    }
+    .picture h3{
+      text-align: center;
+      font-style: oblique;
+    }
+    .img1{
+      width: 30%;
+      height: 30%;
+
+    }
+   .img2{
+    width:30%;
+    height: 30%;
+   }
+   .img3{
+    width: 30%;
+    height: 30%;
+   }
+   .img4{
+    width: 30%;
+    height: 30%;
+   }
+   .img5{
+    height: 30%;
+    width: 30%;
+   }
+   .img6{
+    height:30% ;
+    width: 30%;
+   }
+   .picture{
+    margin-left: 9%;
+   }
+   
+   .about h1{
+    letter-spacing: 10px;
+    text-align: center;
+    color: goldenrod;
+    font-style: oblique;
+    font-family: sans-serif;
+    text-transform: uppercase;
+   }
+   .about{
+    background-color: oldlace;
+   }
+   .about h1:hover{
+    color: black;
+    padding: 18px;
+    transition: all 0.3s ease;
+   }
+   .about h6{
+    text-align: center;
+    font-style: italic;
+   }
+   .about p{
+     text-align: center;
+     width: 50%;
+     margin-left: 25%;
+     font-style: italic;
+   }
+   .about h5{
+    text-align: center;
+    font-style: oblique;
+   
+   }
+   .pool p{
+    width: 35%;
+    margin-left: 3%;
+    float: left;
+    position: relative;
+    float: left;
+    text-align: center;
+    height: 80%;
+    bottom: 300px;
+    font-style: italic;
+    font-size: large;
+    
+   
+   }
+   .pol{
+    background-color: oldlace;
+   }
+   .pol h2{
+    letter-spacing: 10px;
+    text-align: center;
+    color: goldenrod;
+    font-style: oblique;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    
+   }
+   .pol h2:hover{
+    color: black;
+    padding: 16px;
+    transition: 1s;
+   }
+   .divclass img{
+    width: 45%;
+    height: 80%;
+    border-radius: 16px;
+    margin-left: 50%;
+    margin-bottom: 10px;
+    bottom: 500px;
+
+   }
+   
+   .food{
+    background-color: oldlace;
+   }
+   .food h1{
+    text-align: left;
+    color: goldenrod;
+    letter-spacing: 10px;
+   }
+   .food h1:hover{
+    color: black;
+    padding: 16px;
+    transition: all 0.3s ease;
+   }
+   .food h5{
+    text-align: left;
+    text-transform: uppercase;
+   }
+   .food h2{
+    color: #24262b;
+    text-transform: uppercase;
+    font-style: oblique;
+    font-family: sans-serif;
+     margin-left: 10%;
+     text-decoration: underline;
+   }
+   .food ul li{
+    margin-left: 10%;
+    text-transform: capitalize;
+    font-style: italic;
+    font-family: sans-serif;
+    color: goldenrod;
+    
+    }
+    .food ul li:hover{
+      color: brown;
+      padding: 16px;
+      font-style: oblique;
+    font-family: sans-serif;
+    }
+  .kitchen h2{
+    color: #24262b;
+    text-transform: uppercase;
+    margin-left: 10%;
+    font-style: oblique;
+    font-family: sans-serif;
+    text-decoration: underline;
+    display: block;
+  }
+  .kitchen ul li{
+    margin-left: 10%;
+    text-transform: capitalize;
+    font-style: italic;
+    font-family: sans-serif;
+    color: goldenrod;
+  }
+  .kitchen ul li:hover{
+    color: brown;
+    padding: 16px;
+    font-style: oblique;
+    font-family: sans-serif;
+  }
+  
+
+    </style>
+</head>
+<body>
+
+
+  <header>
+     <nav>
+      <div class="logo">
+       Hotel Lemonade
+      </div>
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">Info</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="register">
+        <input type="search" placeholder="search">
+
+      </div> 
+     </nav>
+     <section class="sec">
+      <span>Enjoy a beautiful </span>
+      <h1>holiday at Hotel lemonade</h1>
+     <br>
+     <a href="C:\Users\Smita Mohanty\Desktop\c\task1\registration.html">Book Now</a>
+  </header>
+
+
+  <section class="about">
+     <hr><b><h1>Hotel Lemonade</h1></b>
+     <h6>5 STAR HOTEL WITH AMAZING VIEW</h6>
+     <p>A five-star hotel is a luxury property with beautiful facilities, top notch services, and Instagram-worthy rooms. 
+      Five-star hotels should be run by people who are polite, accommodating, and discreet.
+      The hotel has a high staff to room ratio and a variety of staff members available at any time. 
+      These can include a butler, doorman, and 24-hour reception. Daily housekeeping is also provided upon request.
+      Other amenities include a fine dining restaurant or bar, a standalone lounge or restaurant, valet or parking options, and childcare options.
+      </p>
+      <h5>SMITA MOHANTY</h5>
+   </section>
+
+
+  <section class="pol">
+    <hr><h2>POOL VIEW</h2>
+    <div class="divclass">
+      <img src="https://www.jet2holidays.com/HotelImages/Web/FNC_70150_Enotel_Lido_0318_01.jpg?w=700">
+       </div>
+    <div class="pool">
+    <p>The hotel has a high staff to room ratio and a variety of staff members available at any time. 
+      These can include a butler, doorman, and 24-hour reception. Daily housekeeping is also provided upon request.
+      Other amenities include a fine dining restaurant or bar, a standalone lounge or restaurant, valet or parking options, and childcare options.
+    </p>
+    </div>
+    </section>
+  <section class="food">
+     <h1>DRINKING AND DINING!</h1>
+     <h5>sublime luxury in the most intense surroundings</h5>
+     <br>
+     <div class="cocktail">
+     <h2>Signature cocktails</h2>
+     <ul>
+      <li>MOCKTAIL</li>
+      <br>
+      <li>VIRGIN MOJITO</li>
+      <br>
+      <li>MOJITO MINT</li>
+      <br>
+      <li>ORANGE MINT</li>
+      <br>
+      <li>BLUE LAGOON</li>
+      <br>
+      <li>STRAWBERRY MOJITO</li>
+      <br>
+      <li>MOJITO WITH SHAKE</li>
+     </ul>
+     </div>
+     <div class="kitchen">
+    <h2>KITCHEN SPECIAL</h2>
+    <ul>
+      <li>SPAGHETTI AL PASTO</li>
+      <br>
+      <li>CRYSTAL</li>
+      <br>
+      <li>SALT AND PEPPER</li>
+      <br>
+      <li>FRAGON BALL</li>
+      <br>
+      <li>STUFFED CRAB</li>
+      <br>
+      <li>BALI PRAWN</li>
+      <br>
+      <li>KEONG CHALLI CHICKEN</li>
+    </ul>
+    </div>
+  </section>
+
+  <div class="picture">
+    <hr><h2>OUR GALLERY</h2>
+    <h3>Explore our collections!</h3>
+     <img src="https://th.bing.com/th/id/R.2007d6dd4ca8f4b527d19c7baaefab7e?rik=rReSTBlU8EgXgg&riu=http%3a%2f%2fwww.offtoeurope.com%2fwp-content%2fuploads%2f2010%2f06%2fradisson-pool.jpg&ehk=CaUisnyP5kcZ1RoXpnFLf0ILEA5k18TKljqzIPNw9JI%3d&risl=1&pid=ImgRaw&r=0" class="img1">
+     <img src="https://www.quirkybyte.com/wp-content/uploads/2016/08/1-100.jpg" class="img2">
+     <img src="https://t-ec.bstatic.com/images/hotel/max1024x768/512/51285543.jpg" class="img3">
+     <img src="https://globaltopgroup.com/wp-content/uploads/2021/09/condo-paradise-ocean-view-for-sale-02.jpg" class="img4">
+     <img src="https://th.bing.com/th/id/R.db4a3f5d277c6847641109dbaab4970c?rik=FAIwIBJKab25GA&riu=http%3a%2f%2fwww.arecalodge.com%2fimages%2fgallery%2fareca-building.jpg&ehk=NLGXiv%2bPYKT8NushnfJ0Ha6T2oIDdCyIlfgT1AsBEB8%3d&risl=&pid=ImgRaw&r=0" class="img5">
+     <img src="https://th.bing.com/th/id/R.55adfa1a4339e05a5ecd407d555471e3?rik=W050Zcf%2fuGWbFw&riu=http%3a%2f%2ftimescozyresort.pattayatophotels.net%2fdata%2fPhotos%2f1230x820%2f6455%2f645542%2f645542829.JPEG&ehk=LlQ4d7umS2tuOwPElNaTYelzqrlfMfOsLK6CCg2F%2b1g%3d&risl=&pid=ImgRaw&r=0" class="img6">
+  </div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h3>Terms & Conditions</h3>
+          <ul>
+            <li><a href="#">privacy policy</a></li>
+          </ul>
+         </div>
+       <div class="footer-col">
+        <h3>Help</h3>
+        <ul>
+          <li><a href="#">payment</a></li>
+          <li><a href="#">cancel Booking</a></li>
+        </ul>
+       </div>
+       <div class="footer-col">
+        <h3>follow us</h3>
+        <ul>
+          <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </div>
+        </ul>
+       </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
